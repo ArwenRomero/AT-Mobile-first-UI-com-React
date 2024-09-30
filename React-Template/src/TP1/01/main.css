@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 20px;
+}
+
+.opcoes a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.icone img {
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .opcoes {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .icone {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .cabecalho,
+  .menuGlobal,
+  .menuContextualizado,
+  .conteudoPrincipal,
+  .anuncios,
+  .rodape {
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  .cabecalho {
+    background-color: #004c99;
+    color: white;
+  }
+  
+  .menuGlobal {
+    background-color: #0073e6;
+    color: white;
+  }
+  
+  .menuContextualizado {
+    background-color: #99ccff;
+    color: #003366;
+  }
+  
+  .conteudoPrincipal {
+    background-color: #cce6ff;
+    color: #003366;
+  }
+  
+  .anuncios {
+    background-color: #80bfff;
+    color: #003366;
+  }
+  
+  .rodape {
+    background-color: #004c99;
+    color: white;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "menuGlobal menuGlobal cabecalho"
+        "menuContextualizado menuContextualizado menuContextualizado"
+        "conteudoPrincipal conteudoPrincipal conteudoPrincipal"
+        "conteudoPrincipal conteudoPrincipal conteudoPrincipal"
+        "anuncios anuncios anuncios"
+        "rodape rodape rodape";
+    }
+  
+    .cabecalho {
+      grid-area: cabecalho;
+    }
+    .menuGlobal {
+      grid-area: menuGlobal;
+    }
+    .menuContextualizado {
+      grid-area: menuContextualizado;
+    }
+    .conteudoPrincipal {
+      grid-area: conteudoPrincipal;
+    }
+    .anuncios {
+      grid-area: anuncios;
+    }
+    .rodape {
+      grid-area: rodape;
+    }
+  }
+  
+@media (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+        "cabecalho cabecalho cabecalho"
+        "menuGlobal menuGlobal anuncios"
+        "menuContextualizado conteudoPrincipal anuncios"
+        "rodape rodape rodape";
+      gap: 5px;
+    }
+  
+    .cabecalho {
+      grid-area: cabecalho;
+    }
+    .menuGlobal {
+      grid-area: menuGlobal;
+    }
+    .menuContextualizado {
+      grid-area: menuContextualizado;
+    }
+    .conteudoPrincipal {
+      grid-area: conteudoPrincipal;
+    }
+    .anuncios {
+      grid-area: anuncios;
+    }
+    .rodape {
+      grid-area: rodape;
+    }
+  }
+  

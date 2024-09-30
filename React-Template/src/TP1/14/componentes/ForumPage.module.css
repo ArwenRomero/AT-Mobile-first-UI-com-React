@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.pagina {
+    font-family: 'Poppins';
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .conteudo {
+    padding: 20px;
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  

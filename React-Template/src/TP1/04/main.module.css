@@ -1,0 +1,87 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "menuGlobal menuGlobal anuncios"
+    "menuContextualizado conteudoPrincipal anuncios"
+    "rodape rodape rodape";
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+}
+
+.cabecalho, .menuGlobal, .menuContextualizado, .conteudoPrincipal, .anuncios, .rodape {
+  margin: 10px;
+}
+
+.cabecalho {
+  grid-area: cabecalho;
+  background-color: #004c99;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.menuGlobal {
+  grid-area: menuGlobal;
+  background-color: #0073e6;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.menuContextualizado {
+  grid-area: menuContextualizado;
+  background-color: #99ccff; 
+  color: #003366;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.conteudoPrincipal {
+  grid-area: conteudoPrincipal;
+  background-color: #cce6ff;
+  color: #003366;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.anuncios {
+  grid-area: anuncios;
+  background-color: #80bfff;
+  color: #003366;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.rodape {
+  grid-area: rodape;
+  background-color: #004c99;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "menuGlobal menuGlobal cabecalho"
+      "menuContextualizado menuContextualizado menuContextualizado"
+      "conteudoPrincipal conteudoPrincipal conteudoPrincipal"
+      "conteudoPrincipal conteudoPrincipal conteudoPrincipal"
+      "anuncios anuncios anuncios"
+      "rodape rodape rodape";
+  }
+  }

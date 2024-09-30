@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  height: 100vh;
+}
+
+.cabecalho,
+.menuGlobal,
+.menuContextual,
+.conteudoPrincipal,
+.anuncios,
+.rodape {
+  padding: 15px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.cabecalho {
+  background-color: #004c99;
+  color: white;
+}
+
+.menuGlobal {
+  background-color: #0073e6;
+  color: white;
+}
+
+.menuGlobalMobile {
+  background-color: #0073e6;
+  color: white;
+  position: relative;
+}
+
+.botaoMenu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.opcoesMenu {
+  display: none;
+  flex-direction: column;
+  margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.opcoesMenu a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.mostrar {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.esconder {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.menuContextual {
+  background-color: #99ccff;
+  color: #003366;
+}
+
+.conteudoPrincipal {
+  background-color: #cce6ff;
+  color: #003366;
+}
+
+.anuncios {
+  background-color: #80bfff;
+  color: #003366;
+}
+
+.rodape {
+  background-color: #004c99;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "menuGlobal menuGlobal cabecalho"
+      "menuContextual menuContextual menuContextual"
+      "conteudoPrincipal conteudoPrincipal conteudoPrincipal"
+      "anuncios anuncios anuncios"
+      "rodape rodape rodape";
+    gap: 5px;
+  }
+
+  .menuGlobal {
+    display: none;
+  }
+
+  .menuGlobalMobile {
+    grid-area: menuGlobal;
+    display: block;
+  }
+
+  .menuContextual {
+    grid-area: menuContextual;
+  }
+
+  .conteudoPrincipal {
+    grid-area: conteudoPrincipal;
+  }
+
+  .anuncios {
+    grid-area: anuncios;
+  }
+
+  .rodape {
+    grid-area: rodape;
+  }
+
+  .somenteMobile {
+    display: block;
+  }
+
+  .somenteDesktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "cabecalho cabecalho cabecalho"
+      "menuGlobal menuGlobal anuncios"
+      "menuContextual conteudoPrincipal anuncios"
+      "rodape rodape rodape";
+    gap: 10px;
+  }
+
+  .cabecalho {
+    grid-area: cabecalho;
+  }
+
+  .menuGlobal {
+    grid-area: menuGlobal;
+  }
+
+  .menuGlobalMobile {
+    display: none;
+  }
+
+  .menuContextual {
+    grid-area: menuContextual;
+  }
+
+  .conteudoPrincipal {
+    grid-area: conteudoPrincipal;
+  }
+
+  .anuncios {
+    grid-area: anuncios;
+  }
+
+  .rodape {
+    grid-area: rodape;
+  }
+
+  .somenteMobile {
+    display: none;
+  }
+
+  .somenteDesktop {
+    display: block;
+  }
+}

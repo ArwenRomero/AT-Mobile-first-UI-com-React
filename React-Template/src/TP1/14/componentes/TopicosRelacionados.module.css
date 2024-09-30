@@ -1,0 +1,42 @@
+.topicos {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+  }
+  
+  .listaTopicos {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444749;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  li:hover {
+    color: #2363ac;
+  }
+  
+  @media (max-width: 768px) {
+    .listaTopicos {
+      flex-direction: column;
+    }
+  
+    li {
+      font-size: 0.9rem;
+    }
+  }  
